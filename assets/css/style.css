@@ -1,0 +1,218 @@
+/* Defaults*/
+
+html, body {
+  display: block;
+  width: 100%;height: 100%;
+  overflow: hidden;
+  font-family: 'Lato', sans-serif;
+  background-color: #ffffff;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Reset */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;padding: 0;
+}
+
+/* main styling */
+
+.main {
+  position: absolute;
+  top: 0;right: 0;bottom: 0;left: 0;
+  width: 100%;height: 100%;
+  overflow: auto;
+}
+
+/* Header */
+
+header {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  top: 0;right: 0;left: 0;
+  width: 100%;height: 80px;
+}
+
+/* Search section in the top middle of the page */
+
+.search {
+  position: absolute;
+  width: 400px;height: 100%;
+  left: 50%; transform: translateX(-50%);
+}
+
+.container-4{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 400px;height: 100%;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.container-4 input#search{
+  width: 400px;
+  height: 40px;
+  background: #f2f2f2;
+  border: none;
+  font-size: 12pt;
+  float: left;
+  color: #000;
+  padding-left: 15px;padding-right: 100px;
+  outline: none;
+  border-radius: 30px;
+}
+
+.container-4 input#search::-webkit-input-placeholder {
+   color: #65737e;
+}
+ 
+.container-4 input#search:-moz-placeholder { /* Firefox 18- */
+   color: #65737e;  
+}
+ 
+.container-4 input#search::-moz-placeholder {  /* Firefox 19+ */
+   color: #65737e;  
+}
+ 
+.container-4 input#search:-ms-input-placeholder {  
+   color: #65737e;  
+}
+
+.container-4 .go{
+  position: absolute;
+  width: 100px;height: 40px;
+  background-color: #212121;
+  float: left;
+  right: 0;
+  border: none;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  outline: none;
+}
+
+/* Section for the logo and the login button */
+
+.logo, .login {
+  width: 150px;height: 100%;
+}
+
+.logo {
+  background-color: black;
+}
+
+.login {
+  position: relative;
+  width: 270px;
+  display: flex;
+  align-items: center;
+}
+
+.phone-number {
+  position: absolute;
+  float: left;
+  width: 300px;height: 40px;
+  line-height: 30px;
+  background-color: #f2f2f2;
+}
+
+.phone-number i {
+  position: absolute;
+  float: left;
+  left: 10px;
+  top: 50%; transform: translateY(-50%);
+}
+
+.phone-number p {
+  position: absolute;
+  float: left;
+  left: 30px;
+  line-height: 40px;
+  font-size: 18px;
+}
+
+.login-button {
+  position: absolute;
+  float: left;
+  left: 200px;
+  width: 100px;height: 40px;  
+  background-color: #ff8d1d;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* Navigation bar */
+
+.sub-header {
+  position: absolute;
+  top: 80px;
+  width: 100%;height: 45px;
+  display: flex;
+  justify-content: center;
+  background-color: #ff8d1d;
+}
+
+.sub-header li {
+  display: inline-block;
+  width: 150px;height: 45px;
+  text-align: center;  
+}
+
+.sub-header li::before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 45px;
+  border-left: 1px solid white;
+}
+
+.sub-header li:last-of-type::before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 45px;
+  border-right: 1px solid white;
+}
+
+.sub-header li a {
+  color: #fff;
+  line-height: 45px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.sub-header li:hover {
+  background-color: #212121;
+}
+
+.sub-header li:hover:nth-child(4), .sub-header li:hover:nth-child(5), .sub-header li:hover:nth-child(6), .sub-header li:hover:nth-child(7) {
+  background-color: #ff8d1d;
+  cursor: initial;
+}
+/* Clear for the float */
+
+.clear {
+  clear: both;
+}
