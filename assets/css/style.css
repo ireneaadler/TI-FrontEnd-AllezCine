@@ -172,6 +172,7 @@ header {
   display: flex;
   justify-content: center;
   background-color: #ff8d1d;
+  z-index: 5;
 }
 
 .sub-header li {
@@ -206,6 +207,10 @@ header {
   background-color: #212121;
 }
 
+.current {
+  background-color: #212121;
+}
+
 .sub-header li:hover:nth-child(4), .sub-header li:hover:nth-child(5), .sub-header li:hover:nth-child(6), .sub-header li:hover:nth-child(7) {
   background-color: #ff8d1d;
   cursor: initial;
@@ -229,7 +234,307 @@ header {
 
 .sub-header li:hover ul li {
   float:none;
- }
+}
+
+ /* Main-Container */
+
+.main-container {
+position: absolute;
+top: 125px;
+width: 100%;height: 100%;
+}
+
+ /* Content parameters */
+
+.content {
+width: 100%;height: 100%;
+}
+
+ /* Highlight Movies */
+
+.highlight-movies {
+  position: relative; 
+  height: 60%;
+}
+
+.top-featured {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 2px; /* Pas oublier de remettre 70 pour le reste */
+  left: 50%;transform: translateX(-50%);
+}
+
+.films {
+  position: relative;
+  display: block;
+  width: 160px;height: 400px;
+  margin: 17px;
+}
+
+.img {
+  position: absolute;
+  display: block;
+  top: 0;right: 0;left: 0;
+  width: 100%;height: 70%;
+  background-color: #fff;
+  padding: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.img:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+}
+
+.films > .img {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.films .txt {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  width: 100%;height: 30%;
+}
+
+.films .txt .txt-title {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;height: 70%;
+  top: 0;
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+}
+
+.films .txt .years {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  width: 50%;height: 30%;
+  top: 70%;
+}
+
+/* Specifications for the display of the Hightlight movies */
+
+.info .hyears, .info .style {
+  display: block;
+  width: 50%;
+}
+
+.info .hyears {
+  float: left;
+}
+
+.info .style {
+  float: right;
+  text-align: right;
+}
+
+/* Featured Movies */
+
+.movies {
+  position: absolute;
+  display: block;
+  left: 50%; transform: translateX(-50%);
+  width: 90%;height: 100%;
+}
+
+.title {
+  position: absolute;
+  width: 100%;height: 50px;
+  border-left: 4px solid #fd8b19;
+  padding-left: 10px;
+  text-transform: uppercase;
+  font-size: 25px;
+  line-height: 50px;
+  font-weight: 600;
+}
+
+.container {
+  position: absolute;
+  top: 70px;
+  width: 80%;height: 100%;
+  left: 50%; transform: translateX(-50%);
+}
+
+.categories {
+  position: absolute;
+  width: 100%;height: 70px;
+  background-color: #ffff;
+}
+
+.genre {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;height: 100%;
+  list-style: none;
+}
+
+.genre li {
+  display: inline-block;
+  width: 40%;height: 50%;
+  margin: 1px;
+  background-color: #f2f0f1;
+  text-align: center;
+  line-height: 35px;
+}
+
+.genre li:last-of-type {
+  width: 50%;
+}
+
+.genre li:hover {
+  background-color: #fd8b19;
+  color: #fff;
+  cursor: pointer;
+}
+
+.genre li.active {
+  background-color: #fd8b19;
+  color: #fff;
+}
+
+.genre li:hover:last-of-type {
+  background-color: #f2f0f1;
+  color: #000;
+  cursor: initial;
+}
+
+.movies-container {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  top: 70px;
+  width:;
+  padding-bottom: 70px;
+}
+
+.txt {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  width: 100%;height: 30%;
+}
+
+.txt .txt-title {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;height: 70%;
+  top: 0;
+}
+
+.txt .info {
+  position: absolute;
+  width: 100%;height: 20%;
+  top: 70%;
+}
+
+/* Load more button */
+
+.load-more {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;height: 50px;
+  line-height: 50px;
+  justify-content: center;
+}
+
+.load-more button {
+  display: block;
+  width: 200px;height: 40px;
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #fd8b19;
+  color: #fff;
+  outline: none;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: 0.2s ease-in-out;
+}
+
+.load-more button:hover {
+  box-shadow: 1px 1px 1px #b2b2b2;
+  transform: scale(1.02);
+}
+
+/* Series library display */
+
+.series {
+  top: 1700px;
+  position: absolute;
+  display: block;
+  left: 50%; transform: translateX(-50%);
+  width: 90%;height: 100%;
+}
+
+/* Films images */
+
+.one .img {
+  background-image: url('../img/1-one.jpg');
+}
+
+.two .img {
+  background-image: url('../img/2-two.jpg');
+}
+
+.three .img {
+  background-image: url('../img/3-three.jpg');
+}
+
+.four .img {
+  background-image: url('../img/4-four.jpg');
+}
+
+.five .img {
+  background-image: url('../img/5-five.jpg');
+}
+
+.six .img {
+  background-image: url('../img/6-six.jpg');
+}
+
+.seven .img {
+  background-image: url('../img/7-seven.jpg');
+}
+
+.height .img {
+  background-image: url('../img/8-height.jpg');
+}
+
+.nine .img {
+  background-image: url('../img/9-nine.jpg');
+}
+
+.ten .img {
+  background-image: url('../img/10-ten.jpg');
+}
+
+.eleven .img {
+  background-image: url('../img/11-eleven.jpg');
+}
+
+.twelve .img {
+  background-image: url('../img/12-twelve.jpg');
+}
 
 /* Clear for the float */
 
