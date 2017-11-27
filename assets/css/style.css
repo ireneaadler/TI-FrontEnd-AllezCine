@@ -177,7 +177,7 @@ header {
 .sub-header li {
   display: inline-block;
   width: 150px;height: 45px;
-  text-align: center;  
+  text-align: center;
 }
 
 .sub-header li::before {
@@ -191,8 +191,7 @@ header {
 .sub-header li:last-of-type::before {
   content: '';
   display: block;
-  position: absolute;
-  height: 45px;
+  height: 45px;width: 150px;
   border-right: 1px solid white;
 }
 
@@ -211,6 +210,28 @@ header {
   background-color: #ff8d1d;
   cursor: initial;
 }
+
+/* Hover menu on item element */
+
+.sub-header li ul {
+  display: none;
+}
+
+.sub-header li:hover ul {
+  display:block;
+ }
+
+.sub-header li ul li {
+  background-color: #ff8d1d;
+  margin-bottom: 2px;
+  transition: 0.1s ease-in-out;
+}
+
+.sub-header li:hover ul li {
+  float:none;
+ }
+
+
 /* Clear for the float */
 
 .clear {
