@@ -544,10 +544,11 @@ width: 100%;height: 100%;
 
 footer {
   position: absolute;
-  top: 3000px;
+  top: 3500px;
   height: 300px;
+  width: 100%;
   text-align: center;
-  background-color: black;
+  background-color:#212121;
   padding: 20px;
   color: white;  
 }
@@ -556,12 +557,30 @@ footer {
   border-radius: 50%;
   width: 64px;
   height: 64px;
-  font-size: 32px;
+  font-size: 47px;
   background-color: orange;
   color: white;
   border:none;
   
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   right: 20px;
+}
+
+.footer-box {
+  
+  text-align: left;
+  top: 500px;
+  bottom: 500px;
+  
+}
+
+.subscribe {
+  color : orange;
+}
+
+.input {
+  border: white 1px solid;
+  width: 25%;
+  padding: 5px;
 }
