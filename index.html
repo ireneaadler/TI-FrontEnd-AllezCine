@@ -6,9 +6,10 @@
 
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/libraries/font-awesome-4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 </head>
 <body>
-	<div id="top-page" class="main">
+	<div id="top" class="main">
 		<header>
 
 			<!-- Logo -->
@@ -464,31 +465,74 @@
 			</div>
 			<hr style="color :grey">
 		</div>
+
+		<div class="footer-down">
+			<div>MOVIES</div>
+			<div>FAQ</div>
+			<div>ACTION</div>
+			<div>ADVENTURE</div>
+			<div>COMEDY</div>
+			<div>ICONS</div>
+			<div>CONTACT US</div>
+		</div>
+
+		<a href="#myButton"></a>
+
 	</footer>
+
+	<p class="toptop">
+		<a href="#top"></a>
+	</p>
 
 	<script type="text/javascript">
 
-		if(Number(prompt("Quel âge avez-vous ?")) >= 18) {
+		/*if(Number(prompt("Quel âge avez-vous ?")) >= 18) {
 			alert("Félicitations ! Vous avez accès au site");
             }else{
                 window.location.href = "http://www.nathan.fr/tchoupi/";
-			}
+			}*/
 		
+		$(document).ready(function(){
+			var button = document.createElement("a");
+			var icon = "<i class='fa fa-arrow-up'></i>";
+			var footer = document.getElementById("footer");
 
-		var button = document.createElement("a");
-		var icon = "<i class='fa fa-arrow-up'></i>";
-		var footer = document.getElementById("footer");
+			button.classList.add('mon-super-bouton');
+			button.href = "#top";
+			
+			button.innerHTML += icon;
+			footer.appendChild(button);
 
-		button.classList.add('mon-super-bouton');
-		button.href = "#top-page";
-		
-		button.innerHTML += icon;
-		footer.appendChild(button);
+			$('.main').scroll(function() {
+			
+				var leScroll = $('.main').scrollTop();
+					console.log(leScroll);
+				if ($(this).scrollTop() > 800) {
+					$('.mon-super-bouton').fadeIn();
+				} else {
+					$('.mon-super-bouton').fadeOut();
+				}
+			});
+
+			$('a[href^="#"]').click(function(e){
+				e.preventDefault();
+
+				var hash = this.hash;
+				
+				$(".main").animate
+				(
+						{
+							scrollTop: $(hash).offset().top
+						}, 800
+				);
+			});
+			});
+
+
 
 		
 	</script>
 	</div>
-	<script type="text/javascript" src="/Applications/MAMP/htdocs/TI-FrontEnd-AllezCine/assets/script.js"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?forceLang=fr&theme=flying&tracking=1"></script>
 </body>
 </html>

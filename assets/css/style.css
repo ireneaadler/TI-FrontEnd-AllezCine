@@ -562,7 +562,7 @@ footer {
   color: white;
   border:none;
   
-  position: absolute;
+  position: fixed;
   bottom: 30px;
   right: 20px;
 }
@@ -583,4 +583,14 @@ footer {
   border: white 1px solid;
   width: 25%;
   padding: 5px;
+}
+
+.footer-down{
+  float: right;
+}
+.footer-down div {
+  
+  float: left;
+  padding: 10px;
+  
 }
