@@ -541,3 +541,27 @@ width: 100%;height: 100%;
 .clear {
   clear: both;
 }
+
+footer {
+  position: absolute;
+  top: 3000px;
+  height: 300px;
+  text-align: center;
+  background-color: black;
+  padding: 20px;
+  color: white;  
+}
+
+.mon-super-bouton {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  font-size: 32px;
+  background-color: orange;
+  color: white;
+  border:none;
+  
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
