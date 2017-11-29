@@ -334,6 +334,14 @@ header {
   padding-bottom: 70px;
 }
 
+.more, .more2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  top: 70px;
+}
+
 .txt {
   display: flex;
   bottom: 0;
@@ -592,10 +600,6 @@ footer {
   border:none; 
 }
 
-.hidden {
-  display: none; /* To not display the button when the page is loading */
-}
-
 .footer-box {
   text-align: left;
   top: 500px;
@@ -686,4 +690,8 @@ footer {
   width: 720px;height: 480px;
   margin: 15% auto;
   z-index: 999;
+}
+
+.hidden {
+  display: none; /* To not display the button when the page is loading */
 }
