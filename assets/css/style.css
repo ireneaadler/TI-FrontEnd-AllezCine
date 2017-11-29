@@ -33,71 +33,89 @@ html {
   position: absolute;
   top: 0;right: 0;bottom: 0;left: 0;
   width: 100%;height: 100%;
-  overflow: auto;
+  overflow-y: auto;
 }
 
 /* Header */
 
 header {
   position: absolute;
+  top: 0;right: 0;left: 0;
+  width: 100%;height: 120px;
+  background-color: #fff;
+}
+
+/* Top Menu Specificities */
+
+.top-menu {
+  position: absolute;
   display: flex;
   justify-content: space-around;
-  top: 0;right: 0;left: 0;
+  align-items: center;
   width: 100%;height: 80px;
 }
 
-/* Search section in the top middle of the page */
+/* Same specificities for the child of .top-menu */
+
+.logo, .search, .login {
+  display: block;
+}
+
+/* Logo section */
+
+.logo {
+  width: 141px;height: 42px;
+  background-image: url('../icons/logo.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Search section */
 
 .search {
-  position: absolute;
-  width: 400px;height: 100%;
-  left: 50%; transform: translateX(-50%);
+  width: 300px;height: 100%;
 }
 
-.container-4{
-  position: absolute;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  width: 400px;height: 100%;
+.search-container {
+  width: 100%; height: 40px;
+  top: 50%; transform: translateY(50%);
   vertical-align: middle;
-  white-space: nowrap;
 }
 
-.container-4 input#search{
-  width: 400px;
-  height: 40px;
+.search-container input {
+  position: absolute;
+  width: 220px;height: 40px;
   background: #f2f2f2;
   border: none;
   font-size: 12pt;
   float: left;
   color: #000;
-  padding-left: 15px;padding-right: 100px;
+  padding-left: 15px;padding-right: 20px;
   outline: none;
   border-radius: 30px;
 }
 
-.container-4 input#search::-webkit-input-placeholder {
+.search-container input::-webkit-input-placeholder {
    color: #65737e;
 }
  
-.container-4 input#search:-moz-placeholder { /* Firefox 18- */
+.search-container input::-mz-placeholder { /* Firefox 18- */
    color: #65737e;  
 }
  
-.container-4 input#search::-moz-placeholder {  /* Firefox 19+ */
+.search-container input::-moz-placeholder {  /* Firefox 19+ */
    color: #65737e;  
 }
  
-.container-4 input#search:-ms-input-placeholder {  
+.search-container input:-ms-input-placeholder {  
    color: #65737e;  
 }
 
-.container-4 .go{
+.search-container button {
   position: absolute;
-  width: 100px;height: 40px;
+  width: 95px;height: 100%;
   background-color: #212121;
-  float: left;
   right: 0;
   border: none;
   border-bottom-right-radius: 30px;
@@ -108,102 +126,92 @@ header {
   outline: none;
 }
 
-/* Section for the logo and the login button */
-
-.logo, .login {
-  width: 150px;height: 100%;
-}
-
-.logo {
-  background-color: black;
-}
+/* Login section */
 
 .login {
   position: relative;
-  width: 270px;
-  display: flex;
-  align-items: center;
+  width: 300px;height: 100%;
 }
 
 .phone-number {
   position: absolute;
-  float: left;
-  width: 300px;height: 40px;
+  top: 20px;
+  left: 0;
+  width: 200px;height: 40px;
   line-height: 30px;
   background-color: #f2f2f2;
 }
 
 .phone-number i {
   position: absolute;
-  float: left;
   left: 10px;
   top: 50%; transform: translateY(-50%);
 }
 
 .phone-number p {
   position: absolute;
-  float: left;
   left: 30px;
   line-height: 40px;
   font-size: 18px;
 }
 
-.login-button {
+.login button  {
   position: absolute;
-  float: left;
-  left: 200px;
+  top: 20px;
+  right: 0;
   width: 100px;height: 40px;  
   background-color: #ff8d1d;
   border: none;
   outline: none;
   border-radius: 0;
   text-align: center;
+  line-height: 40px;
   color: #fff;
   font-size: 18px;
   font-weight: 300;
 }
 
-/* Navigation bar */
+/* Menu of the website */
 
-.sub-header {
+.sub-menu {
   position: absolute;
   top: 80px;
-  width: 100%;height: 45px;
+  width: 100%;height: 40px;
   display: flex;
   justify-content: center;
   background-color: #ff8d1d;
   z-index: 5;
 }
 
-.sub-header li {
+.sub-menu li {
   display: inline-block;
-  width: 150px;height: 45px;
+  width: 100px;height: 40px;
   text-align: center;
 }
 
-.sub-header li::before {
+.sub-menu li::before {
   content: '';
   display: block;
   position: absolute;
-  height: 45px;
+  height: 40px;
   border-left: 1px solid white;
 }
 
-.sub-header li:last-of-type::before {
+.sub-menu li:last-of-type::before {
   content: '';
   display: block;
-  height: 45px;width: 150px;
+  width: 100px;height: 40px;
   border-right: 1px solid white;
 }
 
-.sub-header li a {
+.sub-menu li a {
   color: #fff;
-  line-height: 45px;
+  line-height: 40px;
   text-transform: uppercase;
   font-weight: 600;
 }
 
-.sub-header li:hover {
+.sub-menu li:hover {
   background-color: #212121;
 }
 
@@ -211,62 +219,139 @@ header {
   background-color: #212121;
 }
 
-.sub-header li:hover:nth-child(4), .sub-header li:hover:nth-child(5), .sub-header li:hover:nth-child(6), .sub-header li:hover:nth-child(7) {
+.sub-menu li:hover:nth-child(4), .sub-menu li:hover:nth-child(5), .sub-menu li:hover:nth-child(6), .sub-menu li:hover:nth-child(7) {
   background-color: #ff8d1d;
   cursor: initial;
 }
 
 /* Hover menu on item element */
 
-.sub-header li ul {
+.sub-menu li ul {
   display: none;
 }
 
-.sub-header li:hover ul {
+.sub-menu li:hover ul {
   display:block;
  }
 
-.sub-header li ul li {
+.sub-menu li ul li {
   background-color: #ff8d1d;
   margin-bottom: 2px;
   transition: 0.1s ease-in-out;
+  width: 150px;
 }
 
-.sub-header li:hover ul li {
+.sub-menu li:hover ul li {
   float:none;
 }
 
- /* Main-Container */
+.sub-menu li ul li:last-of-type::before {
+  display: none;
+}
+
+/* Main-Container */
 
 .main-container {
-position: absolute;
-top: 125px;
-width: 100%;height: 100%;
+  position: relative;
+  top: 120px;right: 0;bottom: 0;left: 0;
+  width: 100%;
 }
 
- /* Content parameters */
+/* Content Similar Parameters */
 
 .content {
-width: 100%;height: 100%;
+  width: 100%;height: auto;
 }
 
- /* Highlight Movies */
-
-.highlight-movies {
-  position: relative; 
-  height: 60%;
+.movies, {
+  padding-bottom: 5%;
 }
 
-.top-featured {
-  position: absolute;
-  width: 100%;
+.title {
+  width: 90%;height: 50px;
+  border-left: 4px solid #fd8b19;
+  padding-left: 10px;
+  margin-top:2%;margin-left: 5%;
+  text-transform: uppercase;
+  font-size: 25px;
+  line-height: 50px;
+  font-weight: 600;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.categories {
+  width: 100%;height: 70px;
+}
+
+.genre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;height: 100%;
+  list-style: none;
+}
+
+.genre li {
+  display: inline-block;
+  width: 40%;height: 50%;
+  margin: 1px;
+  background-color: #f2f0f1;
+  text-align: center;
+  line-height: 35px;
+}
+
+.genre li:last-of-type {
+  width: 50%;
+}
+
+.genre li:hover {
+  background-color: #fd8b19;
+  color: #fff;
+  cursor: pointer;
+}
+
+.genre li.active {
+  background-color: #fd8b19;
+  color: #fff;
+}
+
+.genre li:hover:last-of-type {
+  background-color: #f2f0f1;
+  color: #000;
+  cursor: initial;
+}
+
+.movies-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding-top: 25px;
-  padding-bottom: 2px; /* Pas oublier de remettre 70 pour le reste */
-  left: 50%;transform: translateX(-50%);
+  top: 70px;
+  padding-bottom: 70px;
+}
+
+.txt {
+  display: flex;
+  bottom: 0;
+  width: 100%;height: 30%;
+}
+
+.txt .txt-title {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;height: 70%;
+  top: 0;
+}
+
+.txt .info {
+  position: absolute;
+  width: 100%;height: 20%;
+  top: 70%;
 }
 
 .films {
@@ -324,131 +409,9 @@ width: 100%;height: 100%;
   top: 70%;
 }
 
-/* Specifications for the display of the Hightlight movies */
-
-.info .hyears, .info .style {
-  display: block;
-  width: 50%;
-}
-
-.info .hyears {
-  float: left;
-}
-
-.info .style {
-  float: right;
-  text-align: right;
-}
-
-/* Featured Movies */
-
-.movies {
-  position: absolute;
-  display: block;
-  left: 50%; transform: translateX(-50%);
-  width: 90%;height: 100%;
-}
-
-.title {
-  position: absolute;
-  width: 100%;height: 50px;
-  border-left: 4px solid #fd8b19;
-  padding-left: 10px;
-  text-transform: uppercase;
-  font-size: 25px;
-  line-height: 50px;
-  font-weight: 600;
-}
-
-.container {
-  position: absolute;
-  top: 70px;
-  width: 80%;height: 100%;
-  left: 50%; transform: translateX(-50%);
-}
-
-.categories {
-  position: absolute;
-  width: 100%;height: 70px;
-  background-color: #ffff;
-}
-
-.genre {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 45%;height: 100%;
-  list-style: none;
-}
-
-.genre li {
-  display: inline-block;
-  width: 40%;height: 50%;
-  margin: 1px;
-  background-color: #f2f0f1;
-  text-align: center;
-  line-height: 35px;
-}
-
-.genre li:last-of-type {
-  width: 50%;
-}
-
-.genre li:hover {
-  background-color: #fd8b19;
-  color: #fff;
-  cursor: pointer;
-}
-
-.genre li.active {
-  background-color: #fd8b19;
-  color: #fff;
-}
-
-.genre li:hover:last-of-type {
-  background-color: #f2f0f1;
-  color: #000;
-  cursor: initial;
-}
-
-.movies-container {
-  position: absolute;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  top: 70px;
-  width:;
-  padding-bottom: 70px;
-}
-
-.txt {
-  position: absolute;
-  display: flex;
-  bottom: 0;
-  width: 100%;height: 30%;
-}
-
-.txt .txt-title {
-  position: absolute;
-  font-size: 18px;
-  font-weight: 600;
-  text-align: center;
-  width: 100%;height: 70%;
-  top: 0;
-}
-
-.txt .info {
-  position: absolute;
-  width: 100%;height: 20%;
-  top: 70%;
-}
-
 /* Load more button */
 
 .load-more {
-  position: absolute;
   bottom: 0;
   display: flex;
   width: 100%;height: 50px;
@@ -476,14 +439,186 @@ width: 100%;height: 100%;
   transform: scale(1.02);
 }
 
-/* Series library display */
+/* Highlight Movies section */
 
-.series {
-  top: 1700px;
-  position: absolute;
+.top-featured {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+
+.cadre {
+  background-color: #fff;
+  width: 80%;height: 100%;
+  text-align: center;
+  padding-top: 2%;
+  box-shadow: 0.5px 0.5px 1px 0.5px rgb(178, 178, 178);
+}
+
+.cadre .films {
+  display: inline-block;
+}
+
+/* Specifications for the display of the Highlight movies */
+
+.info .hyears, .info .style {
   display: block;
-  left: 50%; transform: translateX(-50%);
-  width: 90%;height: 100%;
+  width: 50%;
+  font-weight: 500;
+}
+
+.info .hyears {
+  float: left;
+  text-align: left;
+}
+
+.info .style {
+  float: right;
+  text-align: right;
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Social Media button at the left */
+
+.social-media {
+  position: fixed;
+  bottom: 50%; 
+  display: block;
+}
+
+.twitter, .facebook, .instagram, .googleplus {
+  position: relative;
+  width: 150px;height: 50px;
+  margin-bottom: 5px;
+  left: -100px;
+  transition: all 0.5s ease-in-out;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.googleplus {
+  margin-bottom: 0;
+}
+
+.social-media .twitter:hover,.social-media .facebook:hover,.social-media .instagram:hover,.social-media .googleplus:hover {
+  left: -4px;
+}
+
+.twitter {
+  background-color: #11a6fa;
+}
+
+.facebook {
+  background-color: #3f5e95;
+}
+
+.instagram {
+  background-color: #e24e8c;
+}
+
+.googleplus {
+  background-color: #da4b2d;
+}
+
+.social-name {
+  display: block;
+  float: left;
+  margin-left: 15px;
+  width: 75px;height: 50px;
+  color: #fff;
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.social-button {
+  display: block;
+  float: right;
+  width: 40px;height: 40px;
+  margin-top: 5px;margin-right: 5px;
+  background-color: #fff;
+  border-radius: 25px;
+  -webkit-background-size: 70%;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#twitter {
+  background-image: url('../icons/tw.png');
+}
+
+#fb {
+  background-image: url('../icons/fb.png');
+}
+
+#ig {
+  background-image: url('../icons/ig.png');
+  -webkit-background-size: 60%;
+  background-size: 60%;
+}
+
+#google {
+  background-image: url('../icons/googleplus.png');
+}
+
+/* Footer */
+
+footer {
+  height: 300px;
+  width: 100%;
+  text-align: center;
+  background-color:#212121;
+  color: white;
+  margin-top: 200px;
+}
+
+.mon-super-bouton {
+  position: fixed;
+  width: 50px;height: 50px;
+  bottom: 25px;
+  right: 25px;
+  border-radius: 50%;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #ff8d1d;
+  color: white;
+  border:none; 
+}
+
+.hidden {
+  display: none; /* To not display the button when the page is loading */
+}
+
+.footer-box {
+  text-align: left;
+  top: 500px;
+  bottom: 400px;
+}
+
+.subscribe {
+  color : orange;
+}
+
+.input {
+  border: white 1px solid;
+  width: 25%;
+  padding: 5px;
+}
+
+.footer-down{
+  float: right;
+}
+
+.footer-down div {
+  float: left;
+  padding: 10px;
 }
 
 /* Films images */
@@ -536,51 +671,19 @@ width: 100%;height: 100%;
   background-image: url('../img/12-twelve.jpg');
 }
 
-/* Clear for the float */
+/* Display frame video */
 
-.clear {
-  clear: both;
+.pop-outer {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;left: 0;
+  width: 100%;height: 100%;
+  z-index: 999;
 }
 
-footer {
-  position: absolute;
-  top: 3500px;
-  height: 300px;
-  width: 100%;
-  text-align: center;
-  background-color:#212121;
-  padding: 20px;
-  color: white;  
-}
-
-.mon-super-bouton {
-  border-radius: 50%;
-  width: 64px;
-  height: 64px;
-  font-size: 47px;
-  background-color: orange;
-  color: white;
-  border:none;
-  
-  position: absolute;
-  bottom: 30px;
-  right: 20px;
-}
-
-.footer-box {
-  
-  text-align: left;
-  top: 500px;
-  bottom: 400px;
-  
-}
-
-.subscribe {
-  color : orange;
-}
-
-.input {
-  border: white 1px solid;
-  width: 25%;
-  padding: 5px;
+.pop-inner {
+  background-color: #fff;
+  width: 720px;height: 480px;
+  margin: 15% auto;
+  z-index: 999;
 }

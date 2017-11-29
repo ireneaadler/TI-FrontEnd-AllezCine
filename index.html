@@ -6,38 +6,49 @@
 
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/libraries/font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<!-- Little script to reload the page automatically when I save the projet -->
+
+	<script>
+		document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+	</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </head>
+
 <body>
-	<div id="top-page" class="main">
+
+	<!-- Start of the main div -->
+	<div id="top" class="main">
+
+		<!-- Start of the header -->
 		<header>
 
-			<!-- Logo -->
+			<!-- Upper part of the menu -->
+			<div class="top-menu">
 
-			<div class="logo"></div>
-			
-			<!-- Search bar -->
+				<!-- Logo -->
+				<div class="logo"></div>
 
-			<div class="search">
-				
-  				<div class="container-4">
-	    			<input type="search" id="search" placeholder="Search..." />
-					<button class="go">Go</button>
-  				</div>
-			</div>
+				<!-- Search -->
+				<div class="search">
+					<div class="search-container">
+						<input type="search" id="search" placeholder="Search..." />
+						<button class="go">Go</button>
+					</div>
+				</div>
 
-			<div class="clear"></div>
-			
-			<!-- Phone number and login -->
-
-			<div class="login">
-				<div class="phone-number">
+				<!-- Login -->
+				<div class="login">
+					<div class="phone-number">
 					<i class="fa fa-phone" aria-hidden="true"></i><p>(+000) 123 345 653</p></div>
-				<button class="login-button">LOGIN</button>
+					<button>LOGIN</button>
+				</div>
 			</div>
-			
-			<!-- Navigation bar -->
 
-			<ul class="sub-header">
+			<!-- Content Menu of the website-->
+			<ul class="sub-menu">
 				<li class="current">
 					<a href="#">home</a>
 				</li>
@@ -62,105 +73,108 @@
 				<li></li>
 				<li></li>
 			</ul>
+
 		</header>
-	
+		<!-- End of the header -->
+
 		<div class="clear"></div>
 
-		<div class="slide-box">
-			<div class="box"></div>
-			<ul class="selection">
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-		</div>
-		
-		<!-- Main-container -->
+		<!-- Main-container Start-->
 
 		<div class="main-container">
-			
-			<!-- Highlight Movies -->
 
-			<div class="content highlight-movies">
+			<!-- Caroussel of the movies -->
+			<div class="content caroussel"></div>
+
+			<!-- Hightlight Movies section -->
+			<div class="content highlight">
 				<div class="top-featured">
-					<div class="films one comedy">
-						<div class="img"></div>
-						<div class="txt">
-							
-							<div class="txt-title">Batman Movie</div>
-							
-							<div class="info">
-								<div class="hyears">2016</div>
-								<div class="style">Comedy</div>
-							</div>
-		
-						</div>
-					</div>
-
-					<div class="films two aventure">
-						<div class="img"></div>
-						<div class="txt">
-							
-							<div class="txt-title">Seigneur des Anneaux : Les deux tours</div>
-							
-							<div class="info">
-								<div class="hyears">2002</div>
-								<div class="style">Aventure</div>
-							</div>
-
-						</div>
-					</div>
-
-					<div class="films three dramatic">
-						<div class="img"></div>
-						<div class="txt">
-							
-							<div class="txt-title">The Fall</div>
-							
-							<div class="info">
-								<div class="hyears">2006</div>
-								<div class="style">Dramatic</div>
+					<div class="cadre">
+						<div class="films one comedy">
+							<div class="img video"></div>
+							<div class="txt">
+								
+								<div class="txt-title">Batman Movie</div>
+								
+								<div class="info">
+									<div class="hyears">2016</div>
+									<div class="style">Comedy</div>
+								</div>
+			
 							</div>
 						</div>
-					</div>
 
-					<div class="films four comedy">
-						<div class="img"></div>
-						<div class="txt">
-							
-							<div class="txt-title">Swiss Army Man</div>
-
-							<div class="info">
-								<div class="hyears">2016</div>
-								<div class="style">Comedy</div>
+						<div style="display:none;" class="pop-outer">
+							<div class="pop-inner">
+								
+								<iframe width="720" height="480" src="https://www.youtube.com/embed/XGSy3_Czz8k" allowfullscreen></iframe>
+								
 							</div>
 						</div>
-					</div>
 
-					<div class="films five thriller">
-						<div class="img"></div>
-						<div class="txt">
+						<div class="films two aventure">
+							<div class="img"></div>
+							<div class="txt">
+								
+								<div class="txt-title">Seigneur des Anneaux : Les deux tours</div>
+								
+								<div class="info">
+									<div class="hyears">2002</div>
+									<div class="style">Aventure</div>
+								</div>
 
-							<div class="txt-title">Hostel</div>
+							</div>
+						</div>
 
-							<div class="info">
-								<div class="hyears">2005</div>
-								<div class="style">Thriller</div>
+						<div class="films three dramatic">
+							<div class="img"></div>
+							<div class="txt">
+								
+								<div class="txt-title">The Fall</div>
+								
+								<div class="info">
+									<div class="hyears">2006</div>
+									<div class="style">Dramatic</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="films four comedy">
+							<div class="img"></div>
+							<div class="txt">
+								
+								<div class="txt-title">Swiss Army Man</div>
+
+								<div class="info">
+									<div class="hyears">2016</div>
+									<div class="style">Comedy</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="films five thriller">
+							<div class="img"></div>
+							<div class="txt">
+								
+								<div class="txt-title">Hostel</div>
+
+								<div class="info">
+									<div class="hyears">2005</div>
+									<div class="style">Thriller</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			
-			<!-- Movies library -->
 
+			<!-- Movies section -->
 			<div class="content movies">
 				
 				<div class="title">
 					featured movies
 				</div>
+
 				<div class="container">
 					<div class="categories">
 						<ul class="genre">
@@ -170,6 +184,8 @@
 							<li></li>
 						</ul>
 					</div>
+
+
 					<div class="movies-container">
 						<div class="films one comedy">
 							<div class="img"></div>
@@ -178,7 +194,6 @@
 								<div class="txt-title">Batman Movie</div>
 								
 								<div class="years">2016</div>
-			
 							</div>
 						</div>
 
@@ -189,7 +204,6 @@
 								<div class="txt-title">Seigneur des Anneaux : Les deux tours</div>
 								
 								<div class="years">2002</div>
-
 							</div>
 						</div>
 
@@ -292,21 +306,19 @@
 								<div class="years">2014</div>
 							</div>
 						</div>
+					</div>
 
 						<div class="load-more">
 							<button>more films</button>
 						</div>
-					</div>
-					
 				</div>
 			</div>
-			
-			<!-- Series library -->
 
+			<!-- Series section -->
 			<div class="content series">
 				
 				<div class="title">
-					featured Series TV
+					featured series
 				</div>
 
 				<div class="container">
@@ -318,7 +330,7 @@
 							<li></li>
 						</ul>
 					</div>
-					
+
 					<div class="movies-container">
 						<div class="films one comedy">
 							<div class="img"></div>
@@ -441,54 +453,78 @@
 								<div class="years">2014</div>
 							</div>
 						</div>
+					</div>
 
-						<div class="load-more">
-							<button>more series</button>
-						</div>
+					<div class="load-more">
+						<button>more films</button>
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- Buy movies section -->
+			<div class="content shop-movies"></div>
+
+			<!-- Contact section -->
+			<div class="content contact"></div>
+
+			<!-- Social Media buttons -->
+				<div class="social-media hidden">
+					<div class="twitter">
+						<a href="#" class="social-name">Twitter</a>
+						<a href="#" class="social-button" id="twitter"></a>
+					</div>
+					<div class="facebook">
+						<a href="#" class="social-name">Facebook</a>
+						<a href="#" class="social-button" id="fb"></a>
+					</div>
+					<div class="instagram">
+						<a href="#" 	class="social-name">Instagram</a>
+						<a href="#" class="social-button" id="ig"></a>
+					</div>
+					<div class="googleplus">
+						<a href="#" class="social-name">Google+</a>
+						<a href="#" class="social-button" id="google"></a>
 					</div>
 				</div>
+			<!-- End of the Social Media buttons -->
+
+		</div>
+		<!-- Main-container end -->
+		
+		<footer>
+			<div class="footer-box">
+				<h2 class="subscribe">SUBSCRIBE TO US</h2>
+				<div class="input">
+					<input type="email" class="mail" value="Your email" style="color: grey">
+					<button type="submit" class="send">SEND</button>
+				</div>
+				<hr style="color :grey">
 			</div>
 
-			<!-- Movies shopping -->
-
-			<div class="content shop-movies"></div>
-			<div class="content contact"></div>
-		</div>
-
-	<footer id="footer">
-		<div class="footer-box">
-			<h2 class="subscribe">SUBSCRIBE TO US</h2>
-			<div class="input">
-				<input type="email" class="mail" value="Your email" style="color: grey">
-				<button type="submit" class="send">SEND</button>
+			<div class="footer-down">
+				<div>MOVIES</div>
+				<div>FAQ</div>
+				<div>ACTION</div>
+				<div>ADVENTURE</div>
+				<div>COMEDY</div>
+				<div>ICONS</div>
+				<div>CONTACT US</div>
 			</div>
-			<hr style="color :grey">
-		</div>
-	</footer>
 
-	<script type="text/javascript">
+			<a href="#myButton"></a>
+		</footer>
 
-		if(Number(prompt("Quel âge avez-vous ?")) >= 18) {
-			alert("Félicitations ! Vous avez accès au site");
-            }else{
-                window.location.href = "http://www.nathan.fr/tchoupi/";
-			}
-		
-
-		var button = document.createElement("a");
-		var icon = "<i class='fa fa-arrow-up'></i>";
-		var footer = document.getElementById("footer");
-
-		button.classList.add('mon-super-bouton');
-		button.href = "#top-page";
-		
-		button.innerHTML += icon;
-		footer.appendChild(button);
-
-		
-	</script>
 	</div>
-	<script type="text/javascript" src="/Applications/MAMP/htdocs/TI-FrontEnd-AllezCine/assets/script.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?forceLang=fr&theme=flying&tracking=1"></script>
+
+<!-- Main end -->
+
+<!-- Loading JavaScript -->
+
+<script src="assets/js/script.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?forceLang=fr&theme=flying&tracking=1"></script>
+
 </body>
 </html>
