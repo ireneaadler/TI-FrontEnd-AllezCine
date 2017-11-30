@@ -1,66 +1,58 @@
-// Age scan with redirection
-
-// if(Number(prompt("Quel âge avez-vous ?")) >= 18) {
-// 		alert("Félicitations ! Vous avez accès au site");
-// } else {
-// 		window.location.href = "http://www.nathan.fr/tchoupi/";
-// }
-
 $(document).ready(function() {
 
-	// // 1. Create the button
+	// 1. Create the button
 
-	// var button = document.createElement("div");
-	// var icon = "<i class='fa fa-arrow-up'></i>";
-	// button.classList.add('mon-super-bouton');
-	// button.classList.add('hidden');
-	// button.href = "#top";
-	// button.innerHTML += icon;
+	var button = document.createElement("div");
+	var icon = "<i class='fa fa-arrow-up'></i>";
+	button.classList.add('mon-super-bouton');
+	button.classList.add('hidden');
+	button.href = "#top";
+	button.innerHTML += icon;
 
-	// var social = $('.social-media');
+	var social = $('.social-media');
 
-	// // 2. Append somewhere
+	// 2. Append somewhere
 
-	// var body = document.getElementsByClassName('main')[0];
-	// body.appendChild(button);
+	var body = document.getElementsByClassName('main')[0];
+	body.appendChild(button);
 
-	// // 3. Add event handler with jQuery tho'! Because it is easier!
+	// 3. Add event handler with jQuery tho'! Because it is easier!
 
-	// $('.main').scroll(function() {
+	$('.main').scroll(function() {
 		
-	// 		var leScroll = $('.main').scrollTop();
+			var leScroll = $('.main').scrollTop();
 
-	// 		if ($(this).scrollTop() > 600) {
-	// 			$('.mon-super-bouton').fadeIn('1000');
-	// 			social.fadeIn();
-	// 		} else {
-	// 			$('.mon-super-bouton').fadeOut('1000');
-	// 			social.fadeOut();
-	// 		} 
+			if ($(this).scrollTop() > 600) {
+				$('.mon-super-bouton').fadeIn('1000');
+				social.fadeIn();
+			} else {
+				$('.mon-super-bouton').fadeOut('1000');
+				social.fadeOut();
+			} 
 
-	// });
+	});
 
-	// $('.mon-super-bouton').click(function(e){
+	$('.mon-super-bouton').click(function(e){
 
-	// 		e.preventDefault();
+			e.preventDefault();
 
-	// 		var hash = this.hash;
+			var hash = this.hash;
 			
-	// 		$('.main').animate (
-	// 			{ 
-	// 				'scrollTop': '0' 
-	// 			}, 600
-	// 			);
+			$('.main').animate (
+				{ 
+					'scrollTop': '0' 
+				}, 600
+				);
 
-	// });
+	});
 
-	// $('.video').click(function(){
-	// 	$('.pop-outer').fadeIn('1000');
-	// });
+	$('.video').click(function(){
+		$('.pop-outer').fadeIn('1000');
+	});
 
-	// $('.pop-outer').click(function(){
-	// 	$('.pop-outer').fadeOut('1000');
-	// });
+	$('.pop-outer').click(function(){
+		$('.pop-outer').fadeOut('1000');
+	});
 
 	// Display none of the loaded section by default
 	$('.more').css('display','none');
@@ -109,6 +101,42 @@ $(document).ready(function() {
         	$this.text('see less');
     	}
 	});
+
+	// Login form 
+
+	// Plugin options and our code
+
+        $("#modal_trigger").leanModal({
+                top: 150,
+                overlay: 0.8,
+                closeButton: ".modal_close"
+        });
+
+        $(function() {
+                // Calling Login Form
+                $("#login_form").click(function() {
+                        $(".social_login").hide();
+                        $(".user_login").show();
+                        return false;
+                });
+
+                // Calling Register Form
+                $("#register_form").click(function() {
+                        $(".social_login").hide();
+                        $(".user_register").show();
+                        $(".header_title").text('Register');
+                        return false;
+                });
+
+                // Going back to Social Forms
+                $(".back_btn").click(function() {
+                        $(".user_login").hide();
+                        $(".user_register").hide();
+                        $(".social_login").show();
+                        $(".header_title").text('Login');
+                        return false;
+                });
+        });
 
 });
 
