@@ -3,19 +3,25 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Films</title>
+	
 
-	<link rel="stylesheet" href="assets/css/style.css">
-	<link rel="stylesheet" href="assets/libraries/font-awesome-4.7.0/css/font-awesome.min.css">
-
+	<link rel="stylesheet" href="assets/libraries/font-awesome-4.7.0/css/font-awesome.min.css">	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+	
 	<!-- Little script to reload the page automatically when I save the projet -->
 
 	<script>
 		document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 	</script>
 
-	<!-- jQuery library -->
+	<!-- jQuery / Bootstrap / JS libraries -->
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+	<link href="assets/libraries/jquery-slide/jquery.slidey.min.css" rel="stylesheet">
+	<script src="assets/libraries/jquery-slide/jquery.slidey.min.js"></script>
+	<link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
@@ -81,12 +87,58 @@
 
 		<div class="clear"></div>
 
+
+
+
 		<!-- Main-container Start-->
 
 		<div class="main-container">
 
 			<!-- Caroussel of the movies -->
-			<div class="content caroussel"></div>
+			<div class="content caroussel">
+
+				<div id="slidey" style="display:none;">
+					  <ul>
+						<li><img src="assets/img/1-one.jpg">
+						  <p class="title">Title 1</p>
+						  <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi cupiditate facilis eaque praesentium? Reiciendis corporis laudantium dicta voluptas cumque consequuntur voluptatibus nostrum ab sit. Sit quaerat earum necessitatibus et quasi.</p>
+					
+						</li>
+					
+						<li><img src="assets/img/2-two.jpg">
+						  <p class="title">Title 2</p>
+						  <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos dolore ducimus molestiae accusamus odio. Nihil numquam ullam eligendi minus non doloremque harum itaque, consequatur ipsam sit placeat sequi sunt ratione.</p>
+					
+						</li>
+					
+						<li><img src="assets/img/3-three.jpg">
+						  <p class="title">Title 3</p>
+						  <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae ab deleniti similique, accusamus saepe perferendis non dolore dignissimos sequi rem eaque dolorem debitis aspernatur omnis, id minima est distinctio cum.</p>
+					
+						</li>
+						<li><img src="assets/img/1-one.jpg">
+							<p class="title">Title 1</p>
+							<p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis saepe cupiditate dicta ea sint tempore accusantium nulla earum nemo? Temporibus alias illo sit consectetur commodi, exercitationem est dolores eos! Voluptas.</p>
+					  
+						  </li>
+					  
+						  <li><img src="assets/img/2-two.jpg">
+							<p class="title">Title 2</p>
+							<p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos dolore ducimus molestiae accusamus odio. Nihil numquam ullam eligendi minus non doloremque harum itaque, consequatur ipsam sit placeat sequi sunt ratione.</p>
+					  
+						  </li>
+					  
+						  <li><img src="assets/img/3-three.jpg">
+							<p class="title">Title 3</p>
+							<p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae ab deleniti similique, accusamus saepe perferendis non dolore dignissimos sequi rem eaque dolorem debitis aspernatur omnis, id minima est distinctio cum.</p>
+					  
+						  </li>
+					
+					  </ul>                   
+					
+					</div>
+					
+			</div>
 
 			<!-- Hightlight Movies section -->
 			<div class="content highlight">
@@ -494,7 +546,78 @@
 
 		</div>
 		<!-- Main-container end -->
-		
+
+		<div class="container">
+			<div class="row">
+				<div class="col-3 box">
+
+					<div class="box-content"> 
+						<span class="box-icon"> 
+							<i class="fa fa-map-marker"> 
+							</i> 
+						</span> 
+
+						Adress
+
+					</div>
+				</div>
+				<div class="col-3 box">
+					<div class="box-content">
+							<span class="box-icon"> 
+									<i class="fa fa-map-marker"> 
+									</i> 
+								</span> 
+								Adress</div>
+				</div>
+				<div class="col-3 box">
+					<div class="box-content">
+							<span class="box-icon"> 
+									<i class="fa fa-map-marker"> 
+									</i> 
+								</span> 
+								Adress</div>
+				</div>
+				<div class="col-3 box">
+					<div class="box-content">
+							<span class="box-icon"> 
+									<i class="fa fa-map-marker"> 
+									</i> 
+								</span> Adress</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<form class="form col-12">
+					<div class="row rowrow">
+							<div class="col-lg-6">
+								<input type="text" class="form-control" placeholder="Last Name">
+							</div>
+							<div class="col-lg-6">
+								<input type="text" class="form-control" placeholder="Name">
+							</div>
+					</div>
+
+					<div class="row rowrow">
+							<div class="col-lg-6">
+								<input type="email" class="form-control" placeholder="Email">
+							</div>
+							<div class="col-lg-6">
+								<input type="text" class="form-control" placeholder="Subject">
+							</div>
+					</div>
+					<div class=" row rowrow"> 
+						<textarea class="form-control" type="text" rows="10" placeholder="Your message"></textarea>
+					</div>
+					<button class="btn">Send message</button>
+				</form>
+			</div>
+		</div>
+
+		<!-- footer beginning -->
+
 		<footer>
 			<div class="footer-box">
 				<h2 class="subscribe">SUBSCRIBE TO US</h2>
@@ -525,7 +648,6 @@
 <!-- Loading JavaScript -->
 
 <script src="assets/js/script.js"></script>
-
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?forceLang=fr&theme=flying&tracking=1"></script>
 
 </body>

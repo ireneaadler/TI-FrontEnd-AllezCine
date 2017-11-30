@@ -687,3 +687,53 @@ footer {
   margin: 15% auto;
   z-index: 999;
 }
+
+.slidey-row .slidey-controls-next, .slidey-controls-previous {
+  top: auto !important;
+  bottom : 10px !important;
+  z-index: 99999 !important;
+  opacity: 1;
+
+}
+
+.slidey-row .slidey-controls {
+  opacity: 1;
+}
+
+.rowrow {
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: black;
+  color : white;
+}
+
+.box {
+  padding: 15px;
+}
+
+.box-content {
+  background-color: #292929;
+  height: 200px;
+  text-align: center;
+  position: relative;
+}
+
+.box-icon {
+  position: absolute;
+  display: block;
+  top: -16px;
+  width: 100%;
+  text-align: center;
+}
+
+.box-icon i {
+  height: 32px;
+  width: 32px;
+  background-color: #FF8C35;
+  border-radius: 50%;
+  color : white;
+  line-height: 32px;
+  
+}

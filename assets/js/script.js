@@ -63,5 +63,20 @@ $(document).ready(function() {
 		$('.pop-outer').fadeOut('fast');
 	});
 
+	$("#slidey").slidey({
+		
+					interval: 3000,
+					listCount: 5,
+					showList: true,
+					showNodes: false,
+					nodeContainer: ""
+					
+					});
+					
+
 });
+
+	//$("#slidey").slidey();
+	
+
 
